@@ -47,8 +47,8 @@ services:
       - clickhouse_data:/var/lib/clickhouse
       - clickhouse_logs:/var/log/clickhouse-server
       - backups:/backups
-      - ${PWD}/config/backup_disk.xml:/etc/clickhouse-server/config.d/backup_disk.xml # TODO
-      - ${PWD}/config/chroma_users.xml:/etc/clickhouse-server/users.d/chroma.xml # TODO
+      # - ${PWD}/config/backup_disk.xml:/etc/clickhouse-server/config.d/backup_disk.xml # TODO
+      # - ${PWD}/config/chroma_users.xml:/etc/clickhouse-server/users.d/chroma.xml # TODO
     networks:
       - internal
 
