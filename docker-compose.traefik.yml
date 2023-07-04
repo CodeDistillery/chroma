@@ -38,7 +38,9 @@ services:
       - "traefik.http.routers.chroma.middlewares=oauth-verify@docker"
 
   clickhouse:
-    image: clickhouse/clickhouse-server:22.9-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.clickhouse
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
       - CLICKHOUSE_TCP_PORT=9000
